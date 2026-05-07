@@ -8,9 +8,9 @@ if (show_hint) {
     var box_width = 150;
     var box_height = 20;
     var box_x1 = x - box_width / 2;
-    var box_y1 = y - 70;
+    var box_y1 = y + 70 - 70;
     var box_x2 = x + box_width / 2;
-    var box_y2 = y - 30;
+    var box_y2 = y + 70 - 30;
     
     // Фон окна
     draw_set_color(c_black);
@@ -27,7 +27,7 @@ if (show_hint) {
     draw_set_valign(fa_middle);
     draw_set_color(c_white);
     
-	draw_text(x, y - 52.5, interaction_text);
+	draw_text(x, y + 70 - 52.5, interaction_text);
     
     // Сброс настроек
     draw_set_halign(fa_left);
