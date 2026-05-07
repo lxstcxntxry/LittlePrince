@@ -1,0 +1,22 @@
+# Кэш и временные файлы
+.yyc/
+.yyc_bin/
+*.yyz
+*.yyp~
+*.tmp
+*.swp
+*.db
+*.log
+.DS_Store
+*.autosave
+*.code-workspace
+
+# Компиляционные папки
+/build/
+bin/
+*.exe
+*.dll
+*.zip
+
+# Системные файлы
+Thumbs.db
