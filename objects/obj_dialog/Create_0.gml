@@ -1,6 +1,8 @@
 dialog_map = ds_map_create();
 dialog_text = "";
 
+dialog_queue = noone;
+queue_active = false;
 dialog_alpha = 0;
 dialog_fade = 10;
 dialog_showing = false;
@@ -44,3 +46,5 @@ show_dialog = function(key) {
         dialog_current_key = key;
     }
 };
+
+//draw_text_ext
