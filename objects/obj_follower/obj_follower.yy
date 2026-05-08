@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_abrakadbra",
-  "eventList":[],
+  "%Name":"obj_follower",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_abrakadbra",
+  "name":"obj_follower",
   "overriddenProperties":[],
   "parent":{
-    "name":"Level_2",
-    "path":"folders/Level_2.yy",
+    "name":"Level_1",
+    "path":"folders/Level_1.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_follower",
+    "path":"sprites/spr_follower/spr_follower.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
