@@ -1,7 +1,6 @@
 dialog_map = ds_map_create();
 dialog_text = "";
-dialog_timer = 0;
-dialog_duration = 600;
+
 dialog_alpha = 0;
 dialog_fade = 10;
 dialog_showing = false;
@@ -36,13 +35,12 @@ show_dialog = function(key) {
         var dialog_list = dialog_map[? key];
         dialog_text = "";
         for (var i = 0; i < ds_list_size(dialog_list); i++) {
-            if (i > 0) dialog_text += "\n"; // символ переноса строки для draw_text
+            if (i > 0) dialog_text += "\n";
             dialog_text += dialog_list[| i];
         }
-        dialog_timer = dialog_duration;
         dialog_showing = true;
         dialog_alpha = 0;
+        global.game_paused = true;
         dialog_current_key = key;
-		global.game_paused = true;
     }
 };
