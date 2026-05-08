@@ -9,6 +9,8 @@ if (dialog_showing || dialog_alpha > 0) {
     draw_set_color(c_black);
     draw_roundrect(xx, yy, xx + w, yy + h, false);
     draw_set_color(c_white);
-    draw_text(xx + margin, yy + margin, dialog_text);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top); 
+    draw_text(xx + 30 + margin, yy + 30 + margin, dialog_text);
     draw_set_alpha(1);
 }

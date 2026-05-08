@@ -22,11 +22,6 @@ if (dist <= interaction_distance) {
         
         // Уничтожаем растение
         instance_destroy();
-		
-		if (instance_exists(obj_dialog)) 
-		{
-		with (obj_dialog) show_dialog("start");
-		}
     }
 } else {
     show_hint = false;

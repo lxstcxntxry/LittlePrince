@@ -1,14 +1,14 @@
 dialog_map = ds_map_create();
 dialog_text = "";
 dialog_timer = 0;
-dialog_duration = 120; // сколько кадров показывается диалог (2 сек при 60fps)
-dialog_alpha = 0;      // прозрачность для плавного появления и исчезания
-dialog_fade = 10;      // скорость появления/исчезания
+dialog_duration = 600;
+dialog_alpha = 0;
+dialog_fade = 10;
 dialog_showing = false;
 
 global.game_paused = false;
 
-// Загрузка диалогов из файла dialogs.txt
+// Загрузка диалогов из файла dialogs.txt (ds_list для каждого ключа)
 var file;
 if (file_exists("dialogs.txt")) {
     file = file_text_open_read("dialogs.txt");
@@ -19,19 +19,30 @@ if (file_exists("dialogs.txt")) {
         if (sep > 0) {
             var key = string_trim(string_copy(line, 1, sep - 1));
             var txt = string_trim(string_copy(line, sep + 1, string_length(line) - sep));
-            dialog_map[? key] = txt;
+            if (!ds_map_exists(dialog_map, key)) {
+                var new_list = ds_list_create();
+                ds_map_add(dialog_map, key, new_list);
+            }
+            var dialog_list = dialog_map[? key];
+            ds_list_add(dialog_list, txt);
         }
     }
     file_text_close(file);
 }
 
-// Метод show_dialog для вызова извне
+// Метод show_dialog для вызова извне — все строки сразу
 show_dialog = function(key) {
     if (ds_map_exists(dialog_map, key)) {
-        dialog_text = dialog_map[? key];
+        var dialog_list = dialog_map[? key];
+        dialog_text = "";
+        for (var i = 0; i < ds_list_size(dialog_list); i++) {
+            if (i > 0) dialog_text += "\n"; // символ переноса строки для draw_text
+            dialog_text += dialog_list[| i];
+        }
         dialog_timer = dialog_duration;
         dialog_showing = true;
         dialog_alpha = 0;
+        dialog_current_key = key;
 		global.game_paused = true;
     }
 };
