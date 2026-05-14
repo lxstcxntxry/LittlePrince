@@ -32,7 +32,7 @@ if (file_exists("dialogs.txt")) {
 }
 
 // Метод show_dialog для вызова извне — все строки сразу
-show_dialog = function(key) {
+/*show_dialog = function(key) {
     if (ds_map_exists(dialog_map, key)) {
         var dialog_list = dialog_map[? key];
         dialog_text = "";
@@ -45,6 +45,32 @@ show_dialog = function(key) {
         global.game_paused = true;
         dialog_current_key = key;
     }
+}*/
+show_dialog = function(key) {
+    if (ds_map_exists(dialog_map, key)) {
+        var dialog_list = dialog_map[? key];
+        dialog_text = "";
+        for (var i = 0; i < ds_list_size(dialog_list); i++) {
+            if (i > 0) dialog_text += "\n";
+            dialog_text += dialog_list[| i];
+        }
+        // === отладка ===
+        show_debug_message("=== show_dialog called with key: " + key);
+        show_debug_message("dialog_text: [" + dialog_text + "]");
+        var size = ds_list_size(dialog_list);
+        show_debug_message("dialog_list size: " + string(size));
+        if (size > 0) {
+            show_debug_message("First element: [" + string(dialog_list[| 0]) + "]");
+        }
+        // ===============
+        dialog_showing = true;
+        dialog_alpha = 0;
+        global.game_paused = true;
+        dialog_current_key = key;
+    } else {
+        show_debug_message("ERROR: key not found in map: " + key);
+    }
 };
+
 
 //draw_text_ext
