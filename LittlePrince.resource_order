@@ -9,6 +9,7 @@
     {"name":"ButtonLVL1","order":1,"path":"objects/ButtonLVL1/ButtonLVL1.yy",},
     {"name":"ButtonLVL2","order":2,"path":"objects/ButtonLVL2/ButtonLVL2.yy",},
     {"name":"ButtonLVL3","order":3,"path":"objects/ButtonLVL3/ButtonLVL3.yy",},
+    {"name":"ButtonLVL4","order":4,"path":"objects/ButtonLVL4/ButtonLVL4.yy",},
     {"name":"obj_camera","order":11,"path":"objects/obj_camera/obj_camera.yy",},
     {"name":"obj_dialog","order":36,"path":"objects/obj_dialog/obj_dialog.yy",},
     {"name":"obj_event_controller","order":37,"path":"objects/obj_event_controller/obj_event_controller.yy",},
