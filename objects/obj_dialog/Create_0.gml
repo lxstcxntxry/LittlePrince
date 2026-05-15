@@ -71,11 +71,4 @@ show_dialog = function(key) {
         show_debug_message("ERROR: key not found in map: " + key);
     }
 };
-<<<<<<< Updated upstream
 
-
-//draw_text_ext
-=======
-//draw_text_ext()
-//https://manual.gamemaker.io/beta/en/GameMaker_Language/GML_Reference/Asset_Management/Rooms/Text_Functions/layer_text_wrap.htm
->>>>>>> Stashed changes
