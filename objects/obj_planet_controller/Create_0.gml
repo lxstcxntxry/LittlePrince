@@ -73,3 +73,13 @@ activate_exit = function() {
         // sprite_index = spr_exit_active;
     }
 }
+
+// Начальная подсказка при входе на уровень
+with (obj_dialog) {
+    if (!queue_active) {
+        dialog_queue = ds_list_create();
+        queue_active = true;
+    }
+    ds_list_add(dialog_queue, "intro_hint_1");
+    ds_list_add(dialog_queue, "intro_hint_2");
+}
