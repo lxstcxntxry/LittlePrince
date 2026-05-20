@@ -14,6 +14,7 @@
     {"name":"inst_80B00FB","path":"rooms/Planet1/Planet1.yy",},
     {"name":"inst_DFA4CDC","path":"rooms/Planet1/Planet1.yy",},
     {"name":"inst_432B017","path":"rooms/Planet1/Planet1.yy",},
+    {"name":"inst_4542B428","path":"rooms/Planet1/Planet1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -25,6 +26,7 @@
         {"$GMRInstance":"v4","%Name":"inst_5DAA9D81","colour":8191769,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5DAA9D81","objectId":{"name":"oEnemySprout_zone","path":"objects/oEnemySprout_zone/oEnemySprout_zone.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.832522,"scaleY":1.9743708,"x":1952.0,"y":1920.0,},
         {"$GMRInstance":"v4","%Name":"inst_80B00FB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_80B00FB","objectId":{"name":"obj_dialog","path":"objects/obj_dialog/obj_dialog.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":8.499998,"scaleY":8.499998,"x":1696.0,"y":224.0,},
         {"$GMRInstance":"v4","%Name":"inst_DFA4CDC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_DFA4CDC","objectId":{"name":"obj_event_controller","path":"objects/obj_event_controller/obj_event_controller.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":8.5,"scaleY":8.5,"x":1696.0,"y":160.0,},
+        {"$GMRInstance":"v4","%Name":"inst_4542B428","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4542B428","objectId":{"name":"obj_baobab_gauge","path":"objects/obj_baobab_gauge/obj_baobab_gauge.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":11.499999,"scaleY":11.499999,"x":1504.0,"y":160.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_27C1D0F1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_27C1D0F1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.24244033,"scaleY":0.2424403,"spriteId":{"name":"sprPlanet","path":"sprites/sprPlanet/sprPlanet.yy",},"x":1920.0,"y":1920.0,},

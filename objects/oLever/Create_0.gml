@@ -1,9 +1,14 @@
+depth = 0; // Поверх всего
+
 lever_index = 0;        // задать в редакторе: 0–3 (A, Б, В, Г)
 active = false;         // выключен (опущен)
 sprite_off = spr_lever_off;   // спрайт выключенного рычага
 sprite_on  = spr_lever_on;    // спрайт включенного рычага
 
 sprite_index = sprite_off;
+
+interaction_text = "[E] - вкл/выкл";
+show_hint = false;   
 
 toggle = function() {
     active = !active;
