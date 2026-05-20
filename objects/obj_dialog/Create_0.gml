@@ -78,7 +78,7 @@ show_dialog = function(key) {
     if (ds_map_exists(dialog_map, key)) {
         var dialog_list = dialog_map[? key];
         dialog_text = "";
-		var max_width = 320; // ширина рамки в пикселях\
+		var max_width = 250; // ширина рамки в пикселях\
 		
         for (var i = 0; i < ds_list_size(dialog_list); i++) {
 			var line = wrap_text_pixel(dialog_list[| i], max_width);
