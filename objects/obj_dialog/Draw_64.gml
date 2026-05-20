@@ -9,6 +9,11 @@ if (dialog_showing || dialog_alpha > 0) {
     draw_set_color(c_black);
     draw_roundrect(xx, yy, xx + w, yy + h, false);
 
+	// Рамка
+	draw_set_color(c_white);
+	draw_set_alpha(1);
+	draw_roundrect(xx, yy, xx+w, yy+h, true);
+
     // Применяем наш кириллический шрифт
     draw_set_font(FONT);
     draw_set_color(c_white);

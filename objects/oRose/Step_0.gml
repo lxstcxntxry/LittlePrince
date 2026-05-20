@@ -49,6 +49,7 @@ if (instance_exists(oPlayer)) {
 				    queue_active = true;
 					}
 			first_touch = false;
+			obj_baobab_gauge.appearence = true;
 			}
 			else{
 		        if (!key_pressed) {	

@@ -20,7 +20,7 @@ if (instance_exists(oRose)){
 	}
 
 	// Проверка здоровья розы:
-	if (oEnemySprout_zone.killed_baobabs == 10) {
+	if (oEnemySprout_zone.baobabs_cut == 10) {
 	    // Показываем диалог через менеджер
 	    if (instance_exists(obj_dialog)) {
 	        with (obj_dialog) show_dialog("l1baobabs");

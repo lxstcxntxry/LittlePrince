@@ -28,7 +28,7 @@ if (show_hint) {
     draw_set_color(c_white);
     
 	draw_text(x, y + 70 - 52.5, interaction_text);
-	draw_text(x, y + 70, oEnemySprout_zone.killed_baobabs);
+	draw_text(x, y + 70, oEnemySprout_zone.baobabs_cut);
     
     // Сброс настроек
     draw_set_halign(fa_left);
