@@ -15,14 +15,13 @@ if (dist <= interaction_distance) {
     // Взаимодействие по клавише E
     if (keyboard_check_pressed(ord("E"))) {
         // Можно добавить эффект исчезновения
-        effect_create_above(ef_smoke, x, y, 3, c_white);
+        // effect_create_above(ef_smoke, x, y, 1, c_white);
         
         // Можно добавить звук
         // audio_play_sound(snd_plant_destroy, 1, false);
         
         // Уничтожаем растение
         instance_destroy();
-		oEnemySprout_zone.baobabs_cut += 1;
     }
 } else {
     show_hint = false;
