@@ -1,69 +1,107 @@
-/// Create Event - Объект диалогового окна
-
-// Загрузка диалогов из файла
 dialog_map = ds_map_create();
-dialog_file = "dialogs.txt";
+dialog_text = "";
 
-if (file_exists(dialog_file)) {
-    var file = file_text_open_read(dialog_file);
-    
+dialog_queue = noone;
+queue_active = false;
+dialog_alpha = 0;
+dialog_fade = 10;
+dialog_showing = false;
+
+global.game_paused = false;
+
+// Загрузка диалогов из файла dialogs.txt (ds_list для каждого ключа)
+var file;
+if (file_exists("dialogs.txt")) {
+    file = file_text_open_read("dialogs.txt");
     while (!file_text_eof(file)) {
         var line = file_text_read_string(file);
         file_text_readln(file);
-        
-        if (string_length(line) > 0 && string_char_at(line, 1) != "#") {
-            var separator_pos = string_pos("|", line);
-            if (separator_pos > 0) {
-                var dialog_id = string_copy(line, 1, separator_pos - 1);
-                var dialog_text = string_delete(line, 1, separator_pos);
-                
-                ds_map_add(dialog_map, dialog_id, dialog_text);
+        var sep = string_pos("|", line);
+        if (sep > 0) {
+            var key = string_trim(string_copy(line, 1, sep - 1));
+            var txt = string_trim(string_copy(line, sep + 1, string_length(line) - sep));
+            if (!ds_map_exists(dialog_map, key)) {
+                var new_list = ds_list_create();
+                ds_map_add(dialog_map, key, new_list);
             }
+            var dialog_list = dialog_map[? key];
+            ds_list_add(dialog_list, txt);
         }
     }
-    
     file_text_close(file);
-    show_debug_message("Диалоги загружены успешно!");
-} else {
-    show_debug_message("Файл диалогов не найден: " + dialog_file);
 }
 
-// Функция для показа диалога по ID
-show_dialog = function(_dialog_id) {
-    if (ds_map_exists(dialog_map, _dialog_id)) {
-        current_text = dialog_map[? _dialog_id];
-        displayed_text = "";
-        current_char = 0;          // было char_index
-        is_visible = true;
-        is_active = true;          // <-- ВАЖНО: активируем диалог
-        show_animation = 0;        // сбрасываем анимацию появления
-        alpha = 0;
-        timer = 0;
-    } else {
-        show_debug_message("Dialog ID not found: " + _dialog_id);
+// Метод show_dialog для вызова извне — все строки сразу
+/*show_dialog = function(key) {
+    if (ds_map_exists(dialog_map, key)) {
+        var dialog_list = dialog_map[? key];
+        dialog_text = "";
+        for (var i = 0; i < ds_list_size(dialog_list); i++) {
+            if (i > 0) dialog_text += "\n";
+            dialog_text += dialog_list[| i];
+        }
+        dialog_showing = true;
+        dialog_alpha = 0;
+        global.game_paused = true;
+        dialog_current_key = key;
     }
+}*/
+
+/// wrap_text_pixel(text, max_pixel_width)
+function wrap_text_pixel(_text, _max_width) {
+    var _words = string_split(_text, " ");
+    var _result = "";
+    var _line = "";
+
+    for (var i = 0; i < array_length(_words); i++) {
+        var _word = _words[i];
+        var _test_line = _line;
+        if (_test_line != "") _test_line += " ";
+        _test_line += _word;
+        if (string_width(_test_line) > _max_width) {
+            if (_result != "") _result += "\n";
+            _result += _line;
+            _line = _word;
+        } else {
+            if (_line != "") _line += " ";
+            _line += _word;
+        }
+    }
+    if (_line != "") {
+        if (_result != "") _result += "\n";
+        _result += _line;
+    }
+    return _result;
 }
 
-// Параметры диалогового окна
-dialog_width = 600;
-dialog_height = 120;
-dialog_x = (room_width - dialog_width) / 2;
-dialog_y = room_height - dialog_height - 20;
+show_dialog = function(key) {
+    if (ds_map_exists(dialog_map, key)) {
+        var dialog_list = dialog_map[? key];
+        dialog_text = "";
+		var max_width = 250; // ширина рамки в пикселях\
+		
+        for (var i = 0; i < ds_list_size(dialog_list); i++) {
+			var line = wrap_text_pixel(dialog_list[| i], max_width);
+            if (i > 0) dialog_text += "\n";
+            dialog_text += line;
+        }
+		
+		
+        // === отладка ===
+        show_debug_message("=== show_dialog called with key: " + key);
+        show_debug_message("dialog_text: [" + dialog_text + "]");
+        var size = ds_list_size(dialog_list);
+        show_debug_message("dialog_list size: " + string(size));
+        if (size > 0) {
+        show_debug_message("First element: [" + string(dialog_list[| 0]) + "]");
+        }
+        // ===============
+        dialog_showing = true;
+        dialog_alpha = 0;
+        global.game_paused = true;
+        dialog_current_key = key;
+    } else {
+        show_debug_message("ERROR: key not found in map: " + key);
+    }
+};
 
-// Текущий диалог
-current_text = "";
-displayed_text = "";
-current_char = 0;
-text_speed = 0.5;
-is_active = false;
-
-// Визуальные параметры
-padding = 15;
-border_color = c_white;
-bg_color = c_black;
-bg_alpha = 0.8;
-text_color = c_white;
-
-// Анимация появления
-show_animation = 0;
-animation_speed = 0.1;
