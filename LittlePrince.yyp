@@ -11,8 +11,9 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Buttons","folderPath":"folders/Buttons.yy","name":"Buttons","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Level_1","folderPath":"folders/Level_1.yy","name":"Level_1","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Level_2","folderPath":"folders/Level_2.yy","name":"Level_2","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Level_1","folderPath":"folders/Level_1.yy","name":"Level_1","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Level_3","folderPath":"folders/Level_3.yy","name":"Level_3","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.gm_filter_screenshake-1.0.0","name":"io.gamemaker.gm_filter_screenshake-1.0.0","path":"io.gamemaker.gm_filter_screenshake-1.0.0.yyp",},
@@ -32,7 +33,6 @@
     {"id":{"name":"ButtonLVL1","path":"objects/ButtonLVL1/ButtonLVL1.yy",},},
     {"id":{"name":"ButtonLVL2","path":"objects/ButtonLVL2/ButtonLVL2.yy",},},
     {"id":{"name":"ButtonLVL3","path":"objects/ButtonLVL3/ButtonLVL3.yy",},},
-    {"id":{"name":"ButtonLVL4","path":"objects/ButtonLVL4/ButtonLVL4.yy",},},
     {"id":{"name":"obj_baobab_gauge","path":"objects/obj_baobab_gauge/obj_baobab_gauge.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_dialog","path":"objects/obj_dialog/obj_dialog.yy",},},
@@ -55,6 +55,7 @@
     {"id":{"name":"Lobby","path":"rooms/Lobby/Lobby.yy",},},
     {"id":{"name":"Planet1","path":"rooms/Planet1/Planet1.yy",},},
     {"id":{"name":"Planet2","path":"rooms/Planet2/Planet2.yy",},},
+    {"id":{"name":"Planet3","path":"rooms/Planet3/Planet3.yy",},},
     {"id":{"name":"sExit","path":"sprites/sExit/sExit.yy",},},
     {"id":{"name":"sPlanet","path":"sprites/sPlanet/sPlanet.yy",},},
     {"id":{"name":"spr_keeper_idle","path":"sprites/spr_keeper_idle/spr_keeper_idle.yy",},},
@@ -84,6 +85,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"Lobby","path":"rooms/Lobby/Lobby.yy",},},
     {"roomId":{"name":"Planet1","path":"rooms/Planet1/Planet1.yy",},},
+    {"roomId":{"name":"Planet3","path":"rooms/Planet3/Planet3.yy",},},
     {"roomId":{"name":"Planet2","path":"rooms/Planet2/Planet2.yy",},},
   ],
   "templateType":"game",

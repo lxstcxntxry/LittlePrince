@@ -1,8 +1,9 @@
 {
   "FolderOrderSettings":[
     {"name":"Buttons","order":34,"path":"folders/Buttons.yy",},
+    {"name":"Level_2","order":41,"path":"folders/Level_2.yy",},
     {"name":"Level_1","order":31,"path":"folders/Level_1.yy",},
-    {"name":"Level_2","order":32,"path":"folders/Level_2.yy",},
+    {"name":"Level_3","order":32,"path":"folders/Level_3.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"FONT","order":35,"path":"fonts/FONT/FONT.yy",},
@@ -30,7 +31,7 @@
     {"name":"TestObj","order":2,"path":"objects/TestObj/TestObj.yy",},
     {"name":"Lobby","order":30,"path":"rooms/Lobby/Lobby.yy",},
     {"name":"Planet1","order":5,"path":"rooms/Planet1/Planet1.yy",},
-    {"name":"Planet2","order":1,"path":"rooms/Planet2/Planet2.yy",},
+    {"name":"Planet3","order":1,"path":"rooms/Planet3/Planet3.yy",},
     {"name":"sExit","order":13,"path":"sprites/sExit/sExit.yy",},
     {"name":"sPlanet","order":11,"path":"sprites/sPlanet/sPlanet.yy",},
     {"name":"spr_keeper_idle","order":14,"path":"sprites/spr_keeper_idle/spr_keeper_idle.yy",},

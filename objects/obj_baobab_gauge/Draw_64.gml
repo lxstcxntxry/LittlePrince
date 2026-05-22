@@ -1,5 +1,6 @@
 if (appearence) {
 	var cur = oEnemySprout_zone.baobabs_cut;   // или твоя переменная
+	if (cur > target) cur = target;
 	var max_baobabs = target;       // можно global.baobabs_needed
 	var fill = (cur / max_baobabs) * gauge_w;
 
@@ -29,7 +30,7 @@ if (appearence) {
 	draw_text(gauge_x, gauge_y + gauge_h + 8, "Срублено баобабов: " + string(cur) + " / " + string(target));
 
 	// Если цель достигнута
-	if (cur >= target) {
+	if (cur == target) {
 	    draw_set_color(c_yellow);
 	    draw_set_halign(fa_center);
 	    draw_text(gauge_x + gauge_w/2, gauge_y - 24, "УРОВЕНЬ ПРОЙДЕН!");

@@ -1,5 +1,5 @@
 // Эффекты рычагов: A, Б, В, Г
-lever_effects = [-3, -11, -5, 3];
+lever_effects = [-2, -2, -2, -2];
 // Состояния рычагов (false = выключен/опущен)
 lever_states = [false, false, false, false];
 
@@ -16,7 +16,6 @@ shake_intensity = 0;
 // Звук механизма (замени на свой ресурс, если нужно)
 // snd_lever = звуковой ресурс, должен существовать
 
-// ========== МЕТОДЫ ==========
 update_lever = function(index, state) {
     lever_states[index] = state;
     recompute_speed();
