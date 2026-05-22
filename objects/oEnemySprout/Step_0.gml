@@ -22,7 +22,7 @@ if (dist <= interaction_distance) {
         
         // Уничтожаем растение
         instance_destroy();
-		oEnemySprout_zone.baobabs_cut += 1;
+		oEnemySprout_zone.baobabs_cut += 5;
     }
 } else {
     show_hint = false;

@@ -1,3 +1,4 @@
 max_enemies = 10;           // Сколько врагов считается пределом (пример)
 gameover = false;           // Флаг завершения уровня
-victory = false;
+victory = false;			// Флаг завершения уровня по победе!
+final_step = false;
