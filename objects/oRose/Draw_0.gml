@@ -32,6 +32,9 @@ if (player_nearby)
 	if (first_touch) {
 		draw_text(x, y - 200 - 95, interaction_text2);
 	}
+	else if (obj_event_controller.victory) {
+		draw_text(x, y - 200 - 95, interaction_text3);
+	}
 	else
 	{
 	    draw_text(x, y - 200 - 95, interaction_text);

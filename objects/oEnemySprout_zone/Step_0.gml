@@ -3,8 +3,8 @@ if (global.game_paused) exit;
 
 
 
-if (!obj_event_controller.victory)
-
+if (!obj_event_controller.victory) and (!oRose.first_touch)
+{
 	// Увеличиваем таймер
 	spawn_timer++;
 	
@@ -28,3 +28,4 @@ if (!obj_event_controller.victory)
 	    // Сбрасываем таймер
 	    spawn_timer = 0;
 	}
+}

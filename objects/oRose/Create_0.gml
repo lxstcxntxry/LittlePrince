@@ -6,11 +6,12 @@ first_touch = true; // Первая встреча для диалога
 interaction_distance = 200;  // Расстояние до игрока
 max_health = 100;           // Максимальное здоровье
 current_health = 100;       // Текущее здоровье
-health_decay_speed = 10;   // Скорость убывания здоровья
+health_decay_speed = 1;   // Скорость убывания здоровья
 
 // Текст-подсказка
 interaction_text = "Нажми [E] для того, чтобы полить";
 interaction_text2 = "Нажми [E] для взаимодействия";
+interaction_text3 = "Нажми [E] чтобы попрощаться";
 
 // Переменная для отслеживания состояния спрайта
 sprite_state = 0;

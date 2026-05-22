@@ -2,7 +2,7 @@ if (global.game_paused) exit;
 
 var health_percent = (current_health / max_health) * 100;
 
-if (!first_touch) {
+if (!first_touch) and (!obj_event_controller.victory) {
 	if (current_health > 0) {
 		current_health -= health_decay_speed * (1 / room_speed);
 		current_health = max(0, current_health); // Не меньше 0
@@ -33,8 +33,10 @@ if (instance_exists(oPlayer)) {
 	    can_interact = true;
         
 	    // Проверяем нажатие клавиши E
-	    if (player_nearby && keyboard_check(ord("E"))) {
-			if (first_touch) {
+	    if (player_nearby && keyboard_check(ord("E"))) 
+		{
+			if (first_touch) 
+			{
 					with (obj_dialog) 
 					{
 				    if (dialog_queue != noone) {
@@ -51,8 +53,27 @@ if (instance_exists(oPlayer)) {
 			first_touch = false;
 			obj_baobab_gauge.appearence = true;
 			}
-			else{
-		        if (!key_pressed) {	
+			if (obj_event_controller.victory) 
+			{
+			with (obj_dialog) 
+					{
+				    if (dialog_queue != noone) {
+				        ds_list_destroy(dialog_queue); // На всякий случай очищаем, если уже что-то было
+				    }
+				    dialog_queue = ds_list_create();
+				    ds_list_add(dialog_queue, "l1rosefd1");
+					ds_list_add(dialog_queue, "l1rosefd2");
+					ds_list_add(dialog_queue, "l1rosefd3");
+	
+				    // Можно добавить сколько угодно ключей!
+				    queue_active = true;
+					}
+			obj_event_controller.final_step = true;
+			}
+			else
+			{
+		        if (!key_pressed) 
+				{	
 					current_health = max_health;
 		            key_pressed = true; // Блокируем повторное нажатие
 		        }

@@ -10,8 +10,8 @@
   "name":"TestObj",
   "overriddenProperties":[],
   "parent":{
-    "name":"Level_2",
-    "path":"folders/Level_2.yy",
+    "name":"Level_3",
+    "path":"folders/Level_3.yy",
   },
   "parentObjectId":null,
   "persistent":false,
