@@ -1,3 +1,13 @@
+if (action_timer > 0) {
+    action_timer--;
+    if (action_timer <= 0) {
+        if (action_sprite != -1) {
+            sprite_index = sprPlayer_Front;
+            action_sprite = -1;
+        }
+    }
+}
+
 if (global.game_paused) exit;
 
 // Переменные для направления

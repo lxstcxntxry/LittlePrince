@@ -1,13 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_king_controller",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oKing",
+  "eventList":[],
   "managed":true,
-  "name":"obj_king_controller",
+  "name":"oKing",
   "overriddenProperties":[],
   "parent":{
     "name":"Level_2",
@@ -31,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprKing",
+    "path":"sprites/sprKing/sprKing.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
