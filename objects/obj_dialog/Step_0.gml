@@ -8,9 +8,10 @@ if (dialog_showing) {
 
     // Проверка нажатия пробела для закрытия диалога
     if (keyboard_check_pressed(vk_space)) {
-        dialog_showing = false;
-        global.game_paused = false;
-    }
+    dialog_showing = false;
+    global.game_paused = false;
+	}
+	
 } else {
     // Если нужно — плавное исчезновение окна
     if (dialog_alpha > 0) {

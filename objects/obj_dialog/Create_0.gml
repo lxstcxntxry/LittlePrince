@@ -32,20 +32,22 @@ if (file_exists("dialogs.txt")) {
 }
 
 // Метод show_dialog для вызова извне — все строки сразу
-/*show_dialog = function(key) {
+show_dialog = function(key) {
     if (ds_map_exists(dialog_map, key)) {
         var dialog_list = dialog_map[? key];
         dialog_text = "";
         for (var i = 0; i < ds_list_size(dialog_list); i++) {
             if (i > 0) dialog_text += "\n";
-            dialog_text += dialog_list[| i];
+            var line = dialog_list[| i];
+            line = string_replace_all(line, "#", "\n");   // <-- ВОТ ЭТА СТРОКА
+            dialog_text += line;
         }
         dialog_showing = true;
         dialog_alpha = 0;
         global.game_paused = true;
         dialog_current_key = key;
     }
-}*/
+}
 
 /// wrap_text_pixel(text, max_pixel_width)
 function wrap_text_pixel(_text, _max_width) {
