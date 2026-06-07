@@ -13,6 +13,4 @@ if (shake_duration > 0) {
             cur_x + random_range(-shake_intensity, shake_intensity),
             cur_y + random_range(-shake_intensity, shake_intensity));
     }
-} else {
-    // Тряска кончилась – просто ничего не делаем, камера продолжит следовать за игроком
 }

@@ -1,1 +1,0 @@
-lever_index = 2;

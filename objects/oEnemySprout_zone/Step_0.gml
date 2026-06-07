@@ -1,8 +1,6 @@
 if (global.game_paused) exit;
 
 
-
-
 if (!obj_event_controller.victory) and (!oRose.first_touch)
 {
 	// Увеличиваем таймер

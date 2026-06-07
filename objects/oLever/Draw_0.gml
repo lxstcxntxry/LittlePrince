@@ -3,7 +3,7 @@ draw_self();
 draw_set_font(FONT);
 
 // Показываем подсказку при приближении
-if (show_hint) {
+if (player_nearby) {
 // Параметры окна
     var box_width = 150;
     var box_height = 20;

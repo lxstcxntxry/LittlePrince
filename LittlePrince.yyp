@@ -11,8 +11,8 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Buttons","folderPath":"folders/Buttons.yy","name":"Buttons","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Level_2","folderPath":"folders/Level_2.yy","name":"Level_2","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Level_1","folderPath":"folders/Level_1.yy","name":"Level_1","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Level_2","folderPath":"folders/Level_2.yy","name":"Level_2","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Level_3","folderPath":"folders/Level_3.yy","name":"Level_3","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[
@@ -51,7 +51,6 @@
     {"id":{"name":"oRose","path":"objects/oRose/oRose.yy",},},
     {"id":{"name":"oSpace","path":"objects/oSpace/oSpace.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
-    {"id":{"name":"TestObj","path":"objects/TestObj/TestObj.yy",},},
     {"id":{"name":"Lobby","path":"rooms/Lobby/Lobby.yy",},},
     {"id":{"name":"Planet1","path":"rooms/Planet1/Planet1.yy",},},
     {"id":{"name":"Planet2","path":"rooms/Planet2/Planet2.yy",},},
@@ -64,8 +63,6 @@
     {"id":{"name":"spr_lantern_on","path":"sprites/spr_lantern_on/spr_lantern_on.yy",},},
     {"id":{"name":"spr_lever_off","path":"sprites/spr_lever_off/spr_lever_off.yy",},},
     {"id":{"name":"spr_lever_on","path":"sprites/spr_lever_on/spr_lever_on.yy",},},
-    {"id":{"name":"spr_test1","path":"sprites/spr_test1/spr_test1.yy",},},
-    {"id":{"name":"spr_test2","path":"sprites/spr_test2/spr_test2.yy",},},
     {"id":{"name":"sprCollision","path":"sprites/sprCollision/sprCollision.yy",},},
     {"id":{"name":"sprLobbyBack","path":"sprites/sprLobbyBack/sprLobbyBack.yy",},},
     {"id":{"name":"sprPlanet","path":"sprites/sprPlanet/sprPlanet.yy",},},

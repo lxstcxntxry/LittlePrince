@@ -18,7 +18,6 @@ if (dist <= interaction_distance) {
         effect_create_above(ef_smoke, x, y, 3, c_white);
         
         // Можно добавить звук
-        // audio_play_sound(snd_plant_destroy, 1, false);
         
         // Уничтожаем растение
         instance_destroy();
