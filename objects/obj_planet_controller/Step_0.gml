@@ -14,3 +14,9 @@ if (shake_duration > 0) {
             cur_y + random_range(-shake_intensity, shake_intensity));
     }
 }
+if (!victory) {
+	if (current_speed == target_speed) 
+	{
+	victory = true;
+	}
+}

@@ -19,7 +19,18 @@ if (dialog_showing || dialog_alpha > 0) {
     draw_set_color(c_white);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
-    draw_text_ext(xx + 30 + margin, yy + 30 + margin, dialog_text, -1, w - 2*margin);
+    //draw_text_ext(xx + 30 + margin, yy + 30 + margin, dialog_text, -1, w - 3*margin);
+	
+	draw_rich_text_ext
+	(
+    xx + 30 + margin,
+    yy + 30 + margin,
+    dialog_text,
+    -1,
+    w - 3 * margin,
+    c_white
+	);
 
+	
     draw_set_alpha(1);
 }

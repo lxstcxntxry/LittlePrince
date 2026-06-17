@@ -4,6 +4,6 @@ gauge_w = 280;
 gauge_h = 24;
 
 min_speed = 0;
-max_speed = 15;
+max_speed = 20;
 
 target_speed = 2;

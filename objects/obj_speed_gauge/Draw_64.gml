@@ -36,10 +36,3 @@ draw_text(gauge_x, gauge_y + gauge_h + 8, "Скорость вращения: " 
 
 draw_set_halign(fa_center);
 draw_text(target_x, gauge_y - 24, "Цель: 2");
-
-// Сообщение при достижении цели
-if (cur == target_speed) {
-    draw_set_color(c_yellow);
-    draw_set_halign(fa_center);
-    draw_text(gauge_x + gauge_w/2, gauge_y - 44, "ЦЕЛЬ ДОСТИГНУТА!");
-}

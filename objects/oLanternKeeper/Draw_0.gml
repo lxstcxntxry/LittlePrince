@@ -3,14 +3,14 @@ draw_self();
 draw_set_font(FONT);
 
 // Показываем подсказку при приближении
-if (player_nearby) {
+if (player_nearby) and ((first_touch)or(obj_planet_controller.victory)) {
 // Параметры окна
-    var box_width = 150;
+    var box_width = 340;
     var box_height = 20;
-    var box_x1 = x - box_width / 2;
-    var box_y1 = y + 70 - 70;
-    var box_x2 = x + box_width / 2;
-    var box_y2 = y + 70 - 30;
+    var box_x1 = x + 50 - box_width / 2;
+    var box_y1 = y - 70;
+    var box_x2 = x + 50 + box_width / 2;
+    var box_y2 = y - 30;
     
     // Фон окна
     draw_set_color(c_black);
@@ -26,9 +26,14 @@ if (player_nearby) {
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_set_color(c_white);
-    
-	draw_text(x, y + 70 - 52.5, interaction_text);
-    
+    if (first_touch) 
+	{
+		draw_text(x + 50, y - 52.5, interaction_text);
+	}
+	if (obj_planet_controller.victory)
+	{
+		draw_text(x + 50, y - 52.5, interaction_text2);
+	}
     // Сброс настроек
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);

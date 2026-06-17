@@ -1,0 +1,1 @@
+sprite_index = Keeper_spr_on;

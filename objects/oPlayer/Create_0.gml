@@ -6,7 +6,8 @@ show_dialog = false;
 sprite_base = sprPlayer_Front; // движение вниз + статика
 sprite_blink = sprPlayer_Blink;
 sprite_w = sprPlayer_Behind;  // движение вверх
-
+sprite_a = sprPlayer_Left;  // движение влево
+sprite_d = sprPlayer_Right;  // движение влево
 
 // Устанавливаем начальный спрайт
 sprite_index = sprite_base;

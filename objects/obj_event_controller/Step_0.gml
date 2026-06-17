@@ -1,6 +1,6 @@
 if (global.game_paused) exit;
 
-if (instance_exists(oRose)){
+if (instance_exists(oRose)) {
 	// Основная проверка количества врагов:
 	if (instance_number(oEnemySprout) >= max_enemies) and (!victory) {
 	    gameover = true;
@@ -41,6 +41,21 @@ if (instance_exists(oRose)){
 	}
 	
 }
+
+if (instance_exists(oLantern)) {
+	// Проверка на заключительный диалог с Фонарщиком
+	if (final_step3) and (obj_dialog.dialog_queue == noone)
+	{
+		gameover = true;
+		// Показываем диалог через менеджер
+		if (instance_exists(obj_dialog)) 
+		{
+			with (obj_dialog) show_dialog("gameov3Victo");
+		}
+	}
+}
+
+
 // Если уже gameover, ждем закрытия диалога
 if (gameover) {
     room_goto(Lobby); // Переход в лобби

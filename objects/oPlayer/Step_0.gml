@@ -28,10 +28,12 @@ var move_y = 0;
 	} else if (keyboard_check(ord("A"))) {
 	    if (!place_meeting(x - move_speed, y, oWall)) {
 	        x -= move_speed;
+			sprite_index = sprite_a;
 	    }
 	} else if (keyboard_check(ord("D"))) {
 	    if (!place_meeting(x + move_speed, y, oWall)) {
 	        x += move_speed;
+			sprite_index = sprite_d;
 	    }
 	} else {
 	sprite_index = sprite_base;
