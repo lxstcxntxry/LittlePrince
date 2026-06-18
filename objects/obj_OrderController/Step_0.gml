@@ -3,7 +3,7 @@ if (global.game_paused) exit;
 /// obj_OrderController: Step
 if (game_over || level_cleared) exit;
 
-if (round_active && waiting_for_input) {
+if (round_active && waiting_for_input) or (oKing.first_touch) {
     // Счётчик времени
     time_left -= 1;
     
@@ -36,9 +36,7 @@ if (round_active && waiting_for_input) {
         // Победа при серии
         if (streak >= streak_to_win) {
             level_cleared = true;
-            // TODO: ВСТАВЬТЕ СЮДА ЛОГИКУ УСПЕШНОГО ЗАВЕРШЕНИЯ УРОВНЯ
-            // пример:
-            // room_goto_next();
+			game_over = true;
             exit;
         }
         
@@ -55,7 +53,16 @@ if (round_active && waiting_for_input) {
             game_over = true;
             // TODO: ВСТАВЬТЕ СЮДА ЛОГИКУ ПРОВАЛА УРОВНЯ
             // пример:
-            // room_restart();
+			with (obj_dialog) 
+						{
+					    if (dialog_queue != noone) {
+					        ds_list_destroy(dialog_queue); // На всякий случай очищаем, если уже что-то было
+					    }
+					    dialog_queue = ds_list_create();
+					    ds_list_add(dialog_queue, "l2kingWin");
+					
+					    queue_active = true;
+						}			
         }
     }
 }

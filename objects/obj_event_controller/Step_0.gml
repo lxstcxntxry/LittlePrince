@@ -55,6 +55,19 @@ if (instance_exists(oLantern)) {
 	}
 }
 
+if (instance_exists(oKing)) {
+	// Проверка на заключительный диалог с Фонарщиком
+	if (obj_OrderController.game_over)
+	{
+		gameover = true;
+		// Показываем диалог через менеджер
+		if (instance_exists(obj_dialog)) 
+		{
+			with (obj_dialog) show_dialog("gameov2Victo");
+		}
+	}
+}
+
 
 // Если уже gameover, ждем закрытия диалога
 if (gameover) {

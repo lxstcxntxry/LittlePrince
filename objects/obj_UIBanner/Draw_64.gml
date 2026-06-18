@@ -1,3 +1,5 @@
+if (!oKing.king_ready) exit;
+
 // obj_UIBanner: Draw GUI
 var txt = string(global.order_text);
 var mx = x;

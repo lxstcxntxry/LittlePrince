@@ -30,7 +30,7 @@ key_bow_2      = ord("3");
 // ---------------------------
 current_command = -1;
 waiting_for_input = false;
-time_left = 0;
+time_left = 100;
 streak = 0;
 round_active = false;
 game_over = false;
@@ -46,29 +46,29 @@ var slot_w = 220;
 var slot_h = 60;
 var pad    = 12;
 
-// 1) Повернуться
-var s1 = instance_create_layer(base_x, base_y + 0*(slot_h+pad), "GUI", obj_UICommandSlot);
-s1.slot_title = "Повернуться";
-s1.slot_hint  = "1";
-s1.slot_w = slot_w;
-s1.slot_h = slot_h;
+	// 1) Повернуться
+	var s1 = instance_create_layer(base_x, base_y + 0*(slot_h+pad), "GUI", obj_UICommandSlot);
+	s1.slot_title = "Повернуться";
+	s1.slot_hint  = "1";
+	s1.slot_w = slot_w;
+	s1.slot_h = slot_h;
 
-// 2) Подпрыгнуть
-var s2 = instance_create_layer(base_x, base_y + 1*(slot_h+pad), "GUI", obj_UICommandSlot);
-s2.slot_title = "Подпрыгнуть";
-s2.slot_hint  = "2";
-s2.slot_w = slot_w;
-s2.slot_h = slot_h;
+	// 2) Подпрыгнуть
+	var s2 = instance_create_layer(base_x, base_y + 1*(slot_h+pad), "GUI", obj_UICommandSlot);
+	s2.slot_title = "Подпрыгнуть";
+	s2.slot_hint  = "2";
+	s2.slot_w = slot_w;
+	s2.slot_h = slot_h;
 
-// 3) Поклониться
-var s3 = instance_create_layer(base_x, base_y + 2*(slot_h+pad), "GUI", obj_UICommandSlot);
-s3.slot_title = "Поклониться";
-s3.slot_hint  = "3";
-s3.slot_w = slot_w;
-s3.slot_h = slot_h;
+	// 3) Поклониться
+	var s3 = instance_create_layer(base_x, base_y + 2*(slot_h+pad), "GUI", obj_UICommandSlot);
+	s3.slot_title = "Поклониться";
+	s3.slot_hint  = "3";
+	s3.slot_w = slot_w;
+	s3.slot_h = slot_h;
 
-// Баннер с приказом
-instance_create_layer(display_get_gui_width()/2, 32, "GUI", obj_UIBanner);
+	// Баннер с приказом
+	instance_create_layer(display_get_gui_width()/2, 32, "GUI", obj_UIBanner);
 
 // Старт
 alarm[0] = 1; // небольшой тик, затем начать первый приказ

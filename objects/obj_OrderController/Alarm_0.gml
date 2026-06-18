@@ -2,7 +2,7 @@ if (global.game_paused) exit;
 
 /// obj_OrderController: Alarm[0]
 // Запуск новой «команды короля»
-if (game_over || level_cleared) exit;
+if (game_over || level_cleared) or (!oKing.first_touch) exit;
 
 current_command = irandom_range(0, 2);
 waiting_for_input = true;
