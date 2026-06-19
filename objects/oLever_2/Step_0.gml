@@ -23,6 +23,7 @@ if (instance_exists(oPlayer)) and (!obj_planet_controller.victory) {
 				key_pressed = true; // Блокируем повторное нажатие
 				sprite_index = sprite_off;
 				effect_create_above(ef_smoke, x, y, 10, c_white);
+				audio_play_sound(level, 1, false);
 				obj_planet_controller.start_shake(4, 15);
 				obj_planet_controller.rotation_speed -= effect;
 				obj_planet_controller.current_speed -= effect;
@@ -32,6 +33,7 @@ if (instance_exists(oPlayer)) and (!obj_planet_controller.victory) {
 				key_pressed = true; // Блокируем повторное нажатие
 				sprite_index = sprite_on;
 				effect_create_above(ef_smoke, x, y, 10, c_white);
+				audio_play_sound(level, 1, false);
 				obj_planet_controller.start_shake(4, 15);
 				obj_planet_controller.rotation_speed += effect;
 				obj_planet_controller.current_speed += effect;

@@ -16,7 +16,7 @@ if (dist <= interaction_distance) {
     if (keyboard_check_pressed(ord("E"))) {
         // Можно добавить эффект исчезновения
         effect_create_above(ef_smoke, x, y, 3, c_white);
-        
+        audio_play_sound(Cutting, 1, false);
         // Можно добавить звук
         
         // Уничтожаем растение

@@ -3,7 +3,7 @@ draw_self();
 draw_set_font(FONT);
 
 // Показываем подсказку при приближении
-if (player_nearby) and ((first_touch)or(obj_king_controller.victory)) {
+if (player_nearby) and ((first_touch) or (last_step)) {
 // Параметры окна
     var box_width = 340;
     var box_height = 20;
@@ -30,6 +30,11 @@ if (player_nearby) and ((first_touch)or(obj_king_controller.victory)) {
 	{
 		draw_text(x + 50, y - 52.5, interaction_text);
 	}
+	if (last_step) 
+	{
+		draw_text(x + 50, y - 52.5, interaction_text2);
+	}
+	
     // Сброс настроек
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);

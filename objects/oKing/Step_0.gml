@@ -25,13 +25,15 @@ if (instance_exists(oPlayer)) {
 					    }
 					    dialog_queue = ds_list_create();
 					    ds_list_add(dialog_queue, "l2king");
-						
+						ds_list_add(dialog_queue, "l2king2");
+						ds_list_add(dialog_queue, "l2king3");
+						ds_list_add(dialog_queue, "l2king4");
 					    queue_active = true;
 						}
 					first_touch = false;
 					king_ready = true;
 				} 
-				if (obj_king_controller.victory) 
+				if (last_step) 
 				{
 					with (obj_dialog) 
 						{
@@ -43,7 +45,7 @@ if (instance_exists(oPlayer)) {
 					
 					    queue_active = true;
 						}
-				 obj_event_controller.final_step3 = true;
+				obj_event_controller.final_step2 = true;
 				}
 		    }
 			
